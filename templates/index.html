@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajouter un Projet</title>
+</head>
+<body>
+    <h1>Ajouter un Projet</h1>
+    <form method="post">
+        <label>Nom du projet :</label><br>
+        <input type="text" name="nom" required><br><br>
+
+        <label>Designer :</label><br>
+        <select name="designer">
+            {% for d in designers %}
+                <option value="{{ d }}">{{ d }}</option>
+            {% endfor %}
+        </select><br><br>
+
+        <label>Début :</label><br>
+        <input type="date" name="start" required><br><br>
+
+        <label>Deadline :</label><br>
+        <input type="date" name="deadline" required><br><br>
+
+        <button type="submit">Ajouter</button>
+    </form>
+    <br>
+    <a href="/planning">Voir le planning</a>
+</body>
+</html>
